@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>ID Check Digit — Minimal UI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <main class="wrap">
+        <section class="card">
+            <h1 class="brand">ID Check</h1>
+            <p class="lead">Enter an 8- or 9-digit ID to compute the check digit.</p>
+
+            <form id="calc-form" class="form" onsubmit="return false;">
+                <label class="sr-only" for="id-input">ID number</label>
+                <input id="id-input" name="id_number" inputmode="numeric" pattern="\d*" placeholder="e.g. 12345678"
+                    autocomplete="off" />
+                <div class="actions">
+                    <button id="go" class="btn" type="submit">Calculate</button>
+                </div>
+            </form>
+
+            <div id="result" class="result" aria-live="polite"></div>
+
+            <footer class="foot">Input · Click · Verify </footer>
+        </section>
+    </main>
+
+    <script src="app.js" defer></script>
+</body>
+
+</html>

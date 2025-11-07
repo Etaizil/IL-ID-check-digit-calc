@@ -1,0 +1,125 @@
+:root {
+    --bg: #0f1724;
+    --card: #0b1220;
+    --muted: #94a3b8;
+    --accent: #7c3aed;
+    --glass: rgba(255, 255, 255, 0.03);
+    --radius: 14px;
+    --maxw: 420px;
+}
+
+* {
+    box-sizing: border-box
+}
+
+html,
+body {
+    height: 100%
+}
+
+body {
+    margin: 0;
+    font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    background: linear-gradient(180deg, rgba(12, 17, 26, 1) 0%, rgba(8, 10, 14, 1) 100%);
+    color: #e6eef8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.wrap {
+    width: 100%;
+    max-width: var(--maxw)
+}
+
+.card {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
+    border-radius: var(--radius);
+    padding: 28px;
+    box-shadow: 0 6px 24px rgba(2, 6, 23, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.02);
+    backdrop-filter: blur(6px);
+}
+
+.brand {
+    margin: 0;
+    font-size: 28px;
+    letter-spacing: -0.02em
+}
+
+.lead {
+    color: var(--muted);
+    margin: 8px 0 18px
+}
+
+.form {
+    display: flex;
+    gap: 8px;
+    align-items: center
+}
+
+#id-input {
+    flex: 1;
+    padding: 12px 14px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    background: var(--glass);
+    color: inherit;
+    font-size: 15px;
+    outline: none;
+    transition: box-shadow .12s, transform .09s
+}
+
+#id-input:focus {
+    box-shadow: 0 6px 18px rgba(124, 58, 237, 0.12);
+    transform: translateY(-1px)
+}
+
+.actions {
+    display: flex;
+    align-items: center
+}
+
+.btn {
+    background: linear-gradient(180deg, var(--accent), #5b21b6);
+    border: none;
+    padding: 10px 14px;
+    border-radius: 10px;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 6px 18px rgba(124, 58, 237, 0.16);
+}
+
+.btn:active {
+    transform: translateY(1px)
+}
+
+.result {
+    margin-top: 18px;
+    padding: 14px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.02);
+    color: #cfe7ff;
+    min-height: 44px;
+    display: flex;
+    align-items: center
+}
+
+.foot {
+    color: var(--muted);
+    font-size: 12px;
+    margin-top: 14px;
+    text-align: center
+}
+
+.sr-only {
+    position: absolute;
+    left: -9999px
+}
+
+@media (max-width:420px) {
+    .card {
+        padding: 20px
+    }
+}
